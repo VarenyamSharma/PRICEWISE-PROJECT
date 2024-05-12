@@ -83,7 +83,7 @@ export async function getProductById(productId: string) {
   
       const similarProducts = await Product.find({
         _id: { $ne: productId },
-      }).limit(4);
+      }).limit(3);
   
       return similarProducts;
     } catch (error) {
